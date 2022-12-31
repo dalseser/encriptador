@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+<input id="textoEncriptar">
+<button id="encriptar">encriptar</button>
+
+<input type="text" id="textdesencritar">
+<button id="desencritar">desencritar</button>	
+<script>
+	var textoEncriptar= document.getElementByClass("ingresatexto");
+	var encriptar=document.getElementById("encriptar");
+    var textdesencritar=document.getElementById("textdesencritar");
+    var desencritar=document.getElementById("desencritar");
+   
+
+	
+			function configurar(){
+			 var final=ingresatexto.value
+			 final=final.replace(/e/g,"enter");
+			 final=final.replace(/i/g,"imes");
+			 final=final.replace(/a/g,"ai");
+			 final=final.replace(/o/g,"ober");
+			 final=final.replace(/u/g,"ufat");
+			console.log(final);
+			document.write(final);
+			}
+			function desconfigurar(){
+				var inicio=textdesencritar.value
+					inicio=inicio.replace(/ufat/g,"u");
+					inicio=inicio.replace(/ober/g,"o");
+					inicio=inicio.replace(/ai/g,"ai");
+					inicio=inicio.replace(/imes/g,"i");
+					inicio=inicio.replace(/enter/g,"e");
+					return document.write(inicio)
+
+
+			}
+
+	encriptar.onclick=configurar;
+	desencritar.onclick=desconfigurar;
+
+</script>
