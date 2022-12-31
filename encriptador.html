@@ -1,39 +1,39 @@
 <meta charset="UTF-8">
-<input id="textoEncriptar">
-<button id="encriptar">encriptar</button>
-
-<input type="text" id="textdesencritar">
-<button id="desencritar">desencritar</button>	
+<input id="ingresatexto">
+<button id="config">encriptar</button>
+<button id="desconfig">desencritar</button>	
 <script>
-	var textoEncriptar= document.getElementByClass("ingresatexto");
-	var encriptar=document.getElementById("encriptar");
-    var textdesencritar=document.getElementById("textdesencritar");
-    var desencritar=document.getElementById("desencritar");
-   
+	var textoEncriptar= document.getElementById("ingresatexto");
+	var encriptar=document.getElementById("config");
+	var desencritar=document.getElementById("desconfig");
+	
 
 	
-			function configurar(){
-			 var final=ingresatexto.value
+			function configurar(final){
+			 var final=textoEncriptar.value
 			 final=final.replace(/e/g,"enter");
 			 final=final.replace(/i/g,"imes");
 			 final=final.replace(/a/g,"ai");
 			 final=final.replace(/o/g,"ober");
 			 final=final.replace(/u/g,"ufat");
-			console.log(final);
-			document.write(final);
+			 document.write(final);
+			
 			}
-			function desconfigurar(){
-				var inicio=textdesencritar.value
+			
+			function desconfigurar(inicio){
+				var inicio=textoEncriptar.value
 					inicio=inicio.replace(/ufat/g,"u");
 					inicio=inicio.replace(/ober/g,"o");
-					inicio=inicio.replace(/ai/g,"ai");
+					inicio=inicio.replace(/ai/g,"a");
 					inicio=inicio.replace(/imes/g,"i");
 					inicio=inicio.replace(/enter/g,"e");
-					return document.write(inicio)
-
+					 document.write(inicio)
+				
 
 			}
 
+			
+			
 	encriptar.onclick=configurar;
 	desencritar.onclick=desconfigurar;
 
